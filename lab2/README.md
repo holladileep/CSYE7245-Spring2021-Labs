@@ -24,7 +24,7 @@ Basic usage is available in `main.py`. Run the server with `uvicorn main:app --r
 
 #### Level UP! :arrow_up:
 
-Let's work with an API that would potentially be used by a brokerage to keep a track of investors buying and selling on the stock-market, using their website/app. In addition to serving `PUT` and `GET` requests, the endpoint stores all data on DynanoDB. Create a table on DynamoDB with `id` as the primary key before running the server.
+Let's work with an API that would potentially be used by a brokerage to keep a track of investors buying and selling on the stock-market, using their website/app. In addition to serving `PUT` and `GET` requests, the endpoint stores all data on DynamoDB. Create a table on DynamoDB with `id` as the primary key before running the server.
 
 - `stock_price.py` - A simple Python script to get the current stock price of a given company. This requires an API token to query IEX Cloud and fetch the current stock price. Create a free developer account [here](https://iexcloud.io/). Once you have the account, go to `Home > API Tokens` and copy the `SECRET` token, and use your token in the `stock_price.py` script. 
 
