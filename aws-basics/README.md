@@ -1,4 +1,4 @@
-### Lab 1 - Getting Started with AWS
+### Getting Started with AWS
 
 #### Requirements
 

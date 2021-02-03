@@ -1,4 +1,4 @@
-### Lab 2 - FastAPI
+### FastAPI
 
 #### What is FastAPI? 
 
