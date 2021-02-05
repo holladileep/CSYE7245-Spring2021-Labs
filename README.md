@@ -1,4 +1,4 @@
-# CSYE7245-Labs
+# CSYE7245 - Big Data Systems & Intelligence Analytics | Labs - Spring 2021
 
 
 ## Requirements
@@ -39,7 +39,9 @@ Set up billing alerts for your AWS Account [here](https://docs.aws.amazon.com/Am
 
 ## Repo Contents
 
-### Lab 1 - Getting Started with AWS
+### Getting Started with AWS
+
+Available in the `aws-basics` directory.
 
 #### Requirements
 
@@ -56,7 +58,9 @@ pip3 install boto3
 - Lambda Functions - Deploying Lambda functions using Python Lambda. Documentation and boilerplate code is available on [this repository](https://github.com/holladileep/lambda-serverless-py) 
 
 
-### Lab 2 - FastAPI
+### FastAPI
+
+Available in the `fast-api` directory.
 
 #### What is FastAPI? 
 
