@@ -34,7 +34,7 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
 Additionally, start the Kafka broker by running:
 ```
-bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/kafka-server-start.sh config/server.properties
 ```
 
 ### Usage
