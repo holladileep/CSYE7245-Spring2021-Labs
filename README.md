@@ -41,11 +41,12 @@ Set up billing alerts for your AWS Account [here](https://docs.aws.amazon.com/Am
 
 Refer `README.md` inside the respective directories for setup instructions.
 
-1. [Getting Started with AWS](../aws-basics/)
-
-Covers basic Boto3 usage to interact with S3 + automated Lambda deployment
-
-2. FastAPI
+1. Getting Started with AWS: `aws-basics` :white_check_mark:
+2. Kafka: `kafka` :white_check_mark:
+3. Dask: `dask` :x:
+4. Plotly: `plotly` :x:
+5. SQLAlchemy: `sql-alchemy` :x:
+6. FastAPI: :x:
 
 
 
