@@ -46,4 +46,4 @@ You may use the data from any Month/Year - but we will be sticking with data fro
 
 ### Tutorial
 
-Complete step-by-step instructions and explanations are documented in the `dask_lab.ipynb` Jupyter notebook.
+Complete step-by-step instructions and explanations are documented in the `dask_lab.ipynb` Jupyter notebook. Run the notebook by starting your jupyter server. If you do not have it installed, run `pip install notebook` and start the server by running `jupyter notebok`.
