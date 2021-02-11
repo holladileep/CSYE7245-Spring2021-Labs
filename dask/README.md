@@ -1,7 +1,7 @@
 ## Dask
 
 Dask is designed to extend the numpy and pandas packages to work on data processing problems that are too large to be kept in memory. It breaks the larger processing job into many smaller tasks that are handled by numpy or pandas and then it reassembles the results into a coherent whole.
-Dask is a flexible library for parallel computing in Python. (1)
+Dask is a flexible library for parallel computing in Python. [1]
 
 Dask is composed of two parts:
 
@@ -20,11 +20,11 @@ As datasets and computations scale faster than CPUs and RAM, we need to find way
 
 While it is possible to build these systems in-house (and indeed, many exist), many organizations increasingly depend on solutions developed within the open source community. These tend to be more robust, secure, and fully featured without being tended by in-house staff.
 
-Dask solves the problems above. It figures out how to break up large computations and route parts of them efficiently onto distributed hardware. Dask is routinely run on thousand-machine clusters to process hundreds of terabytes of data efficiently within secure environments. (2)
+Dask solves the problems above. It figures out how to break up large computations and route parts of them efficiently onto distributed hardware. Dask is routinely run on thousand-machine clusters to process hundreds of terabytes of data efficiently within secure environments. [2]
 
 References: <br>
-(1) https://docs.dask.org/en/latest/ <br>
-(2) https://docs.dask.org/en/latest/why.html
+[[1]](https://docs.dask.org/en/latest/) <br>
+[[2]](https://docs.dask.org/en/latest/why.html)
 
 ### Requirements 
 
