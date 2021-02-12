@@ -47,3 +47,11 @@ You may use the data from any Month/Year - but we will be sticking with data fro
 ### Tutorial
 
 Complete step-by-step instructions and explanations are documented in the `dask_lab.ipynb` Jupyter notebook. Run the notebook by starting your jupyter server. If you do not have it installed, run `pip install notebook` and start the server by running `jupyter notebok`.
+
+## Debugging ML Talk 
+
+Fork the repo available at: https://github.com/shreyashankar/debugging-ml-talk
+
+### Getting Started 
+
+This requires a Saturn Cloud account to run. Sign up [here](https://accounts.community.saturnenterprise.io/auth/signup). Create a new `RAPIDS` project with the default configuration and open a Jupyter server, once your instance is provisoned. Upload `nyc_taxi_2020.ipynb` to the server and you should be good to go. 

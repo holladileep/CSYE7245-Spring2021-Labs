@@ -51,11 +51,6 @@ This will start the server & you should be able to view the dashboard by visitin
 
 Cloned from https://github.com/plotly/dash-sample-apps/tree/master/apps/dash-daq-satellite-dashboard
 
-Dash abstracts away all of the technologies and protocols required to build an interactive web-based application, and
-is a simple and effective way to bind a user interface around your Python code. To learn more about Dash, check out our
-[documentation](https://dash.plot.ly/).
-
-
 A Dash application that simulates satellite tracking and displays live data captured by them.
 
 ### Satellite
@@ -81,14 +76,12 @@ acquisition and controls into your Dash applications.
 - Time toggle: Display data from the past hour or the past minute.
 
 ### Running the app locally
-
 ```
 cd dask-worker-space
 pip install -r requirements.txt
 ```
 
 Run the app
-
 ```
 python app.py
 ```
