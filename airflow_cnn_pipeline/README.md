@@ -53,7 +53,7 @@ Once Airflow is installed, configure the same by running:
 ```
 # Use your present working directory as
 # the airflow home
-export AIRFLOW_HOME=~(pwd))
+export AIRFLOW_HOME=~(pwd)
 
 # initialize the database
 airflow db init
