@@ -85,7 +85,7 @@ def upload_models():
         region_name='us-east-2')
 
     # Replace this with your S3 Bucket
-    bucket_name = 'holladileep'
+    bucket_name = ''
 
     model_files = [os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'retrained_graph_v2.pb')),
                    os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'retrained_labels.txt'))]
