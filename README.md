@@ -13,7 +13,7 @@
 
 ### Setup
 
-### AWS Signup & Configuration 
+#### AWS Signup & Configuration 
 
 Sign up for an AWS Account [here](https://portal.aws.amazon.com/billing/signup#/start). Additonally, the AWS Command Line Interface is required to interact with AWS Services. Download AWS CLI from [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 
@@ -23,7 +23,7 @@ Sign up for an AWS Account [here](https://portal.aws.amazon.com/billing/signup#/
 Download your AWS Access and Secret access keys for your AWS Account. Steps to generate and download your keys can be found [here](https://docs.amazonaws.cn/en_us/IAM/latest/UserGuide/id_credentials_access-keys.html) 
 
 
-> :warning: Never share your access and secret access keys or push them to GitHub<br />
+:warning: Never share your access and secret access keys or push them to GitHub<br />
 
 
 Open command line tool of choice on your machine and run `aws configure`. Enter your access and secret access keys and leave the default region name and output format as null. 
@@ -45,12 +45,12 @@ Set up billing alerts for your AWS Account [here](https://docs.aws.amazon.com/Am
 
 Refer `README.md` inside the respective directories for setup instructions.
 
-1. :white_check_mark: Getting Started with AWS: `aws-basics`
-2. :white_check_mark: Kafka: `kafka`
-3. :white_check_mark: Dask: `dask`
-4. :white_check_mark: Plotly Dash: `plotly-dash`
-5. :white_check_mark: SQLAlchemy: `sql-alchemy`
-6. :x: FastAPI
-
+- :white_check_mark: Getting Started with AWS: `aws-basics`
+- :white_check_mark: Kafka: `kafka`
+- :white_check_mark: Dask: `dask`
+- :white_check_mark: Plotly Dash: `plotly-dash`
+- :white_check_mark: SQLAlchemy: `sql-alchemy`
+- :white_check_mark: FastAPI
+- :white_check_mark: Airflow: `airflow_cnn_pipeline`
 
 
