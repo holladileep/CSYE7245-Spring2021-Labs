@@ -1,9 +1,10 @@
-## Acne Type Classification pipeine using CNN 
+## Acne Type Classification Pipeline using CNN 
 
 The training pipeline aims to identify the type of Acne-Rosacea, by training a model with images scraped from dermnet.com with a confidence score.
 The front-end application uses Streamlit to predict using the trained model.
 
-![approach](/airflow_cnn_pipeline/img/approach.jpg)
+<img src="/airflow_cnn_pipeline/img/approach.jpg" alt="approach" width="200"/>
+
 
 #### Model - MobileNet (CNN) 
 - Depthwise Separable Convolution is used to reduce the model size and complexity. It is particularly useful for mobile and embedded vision applications
@@ -97,6 +98,8 @@ Kill the process by running `kill <PID>` - in this case, it would be `kill 13280
 ### Running the Pipeline
 
 Login to Airflow on your browser and turn on the `CNN-Training-Pipeline` DAG from the UI. Start the pipeline by choosing the DAG and clicking on Run.
+
+![airflow_run](/airflow_cnn_pipeline/img/airflow_ui.gif)
 
 
 ### Inference
