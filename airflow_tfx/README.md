@@ -1,6 +1,6 @@
 ## TFX Airflow
 
-From https://www.tensorflow.org/tfx/tutorials/tfx/airflow_workshop
+From https://www.tensorflow.org/tfx/tutorials/tfx/airflow_workshop <br>
 Codebase available here: https://github.com/tensorflow/tfx/tree/master/tfx/examples/airflow_workshop
 
 
@@ -9,6 +9,7 @@ Codebase available here: https://github.com/tensorflow/tfx/tree/master/tfx/examp
 Clone the contents of this repository. Alternatively, you may clone the example directly from the [TFX Git Repo](https://github.com/tensorflow/tfx).
 
 Create a Python 3.7 Virtual environment. The `setup_demo.sh` contains all the required dependencies. Install the dependencies by running:
+
 ```
 sh setup_demo.sh
 ```
@@ -47,7 +48,7 @@ Kill the process by running `kill <PID>` - in this case, it would be `kill 13280
 
 ### Usage Instructions
 
-All usage instructions and step-by-step tutorial is available here: https://www.tensorflow.org/tfx/tutorials/tfx/airflow_workshop
+All usage instructions and complete step-by-step tutorial is available [here.](https://www.tensorflow.org/tfx/tutorials/tfx/airflow_workshop)
 
 ### References & Citation
 
