@@ -50,7 +50,9 @@ Refer `README.md` inside the respective directories for setup instructions.
 - :white_check_mark: Dask: `dask`
 - :white_check_mark: Plotly Dash: `plotly-dash`
 - :white_check_mark: SQLAlchemy: `sql-alchemy`
-- :white_check_mark: FastAPI
+- :white_check_mark: Streamlit: `streamlit`
+- :white_check_mark: Airflow TFX: `airflow_tfx`
+- :white_check_mark: FastAPI: `fast-api`
 - :white_check_mark: Airflow: `airflow_cnn_pipeline`
 
 
