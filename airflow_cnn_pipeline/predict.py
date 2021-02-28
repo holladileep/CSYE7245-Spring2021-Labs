@@ -5,6 +5,7 @@ from __future__ import print_function
 import numpy as np
 import tensorflow as tf
 import pandas as pd
+import os
 
 # Function to load a pretrained model (transfer learning)
 
@@ -63,8 +64,10 @@ def load_labels(label_file):
 from pathlib import Path
 # Provide input to be predicted with model file and label or class file
 
-model_file = str(Path(__file__).with_name('retrained_graph_v2.pb'))
-label_file = str(Path(__file__).with_name('retrained_labels.txt'))
+model_file = os.path.abspath(os.path.join(os.path.dirname(__file__), 'models', 'retrained_graph_v2.pb'))
+label_file = os.path.abspath(os.path.join(os.path.dirname(__file__), 'models', 'retrained_labels.txt'))
+# model_file = str(Path(__file__).with_name('models/retrained_graph_v2.pb'))
+# label_file = str(Path(__file__).with_name('models/retrained_labels.txt'))
 # file_name = "test-acne.jpg"
 # model_file = "retrained_graph_v2.pb"
 # label_file = "retrained_labels.txt"
@@ -114,4 +117,4 @@ def get_score():
         print("Potentially", labels[i], "with confidence level", results[i])
 
     return df
-# predict()
+# get_score()

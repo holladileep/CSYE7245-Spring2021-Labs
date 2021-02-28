@@ -42,9 +42,35 @@ pip install -r requirements.txt
 
 ### Getting Started 
 
+```
+airflow_cnn_pipeline/
+├── app.py
+├── dags/
+│   ├── retrain.py
+│   └── train_model.py
+├── models/
+│   ├── Mobilenet/
+│   │   └── mobilenet_v1_1.0_224/
+│   │       ├── frozen_graph.pb
+│   │       ├── labels.txt
+│   │       └── quantized_graph.pb
+│   ├── retrained_graph_v2.pb
+│   └── retrained_labels.txt
+├── predict.py
+├── requirements.txt
+├── s3_uploader/
+│   ├── __init__.py
+│   └── upload_models.py
+├── scraper/
+│   ├── __init__.py
+│   └── dermnet_scrape.py
+└── train.py
+```
+
+
 #### Update S3 Bucket details
 
-Provide the S3 bucket name in the `bucket_name` parameter in `dags/train_model.py`
+Provide the S3 bucket name in the `bucket_name` parameter in `s3_uploader/upload_models.py`
 
 #### Airflow Configuration
 
@@ -54,6 +80,11 @@ Once Airflow is installed, configure the same by running:
 # Use your present working directory as
 # the airflow home
 export AIRFLOW_HOME=~(pwd)
+
+# export Python Path to allow use
+# of custom modules by Airflow
+export PYTHONPATH="${PYTHONPATH}:${AIRFLOW_HOME}"
+
 
 # initialize the database
 airflow db init
