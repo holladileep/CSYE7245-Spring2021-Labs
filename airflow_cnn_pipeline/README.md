@@ -55,6 +55,11 @@ Once Airflow is installed, configure the same by running:
 # the airflow home
 export AIRFLOW_HOME=~(pwd)
 
+# export Python Path to allow use
+# of custom modules by Airflow
+export PYTHONPATH="${PYTHONPATH}:${AIRFLOW_HOME}"
+
+
 # initialize the database
 airflow db init
 
