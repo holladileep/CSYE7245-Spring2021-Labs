@@ -50,6 +50,8 @@ Complete step-by-step instructions and explanations are documented in the `dask_
 
 ## Debugging ML Talk 
 
+`nyc_taxi_2020.ipynb` from [Shreya Shankar's Repo](https://github.com/shreyashankar/debugging-ml-talk)<br>
+
 Fork the repo available at: https://github.com/shreyashankar/debugging-ml-talk
 
 ### Getting Started 
