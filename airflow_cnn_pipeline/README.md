@@ -42,6 +42,31 @@ pip install -r requirements.txt
 
 ### Getting Started 
 
+```
+airflow_cnn_pipeline/
+├── app.py
+├── dags/
+│   ├── retrain.py
+│   └── train_model.py
+├── models/
+│   ├── Mobilenet/
+│   │   └── mobilenet_v1_1.0_224/
+│   │       ├── frozen_graph.pb
+│   │       ├── labels.txt
+│   │       └── quantized_graph.pb
+│   ├── retrained_graph_v2.pb
+│   └── retrained_labels.txt
+├── predict.py
+├── requirements.txt
+├── s3_uploader/
+│   ├── __init__.py
+│   └── upload_models.py
+├── scraper/
+│   ├── __init__.py
+│   └── dermnet_scrape.py
+└── train.py
+```
+
 
 #### Update S3 Bucket details
 
