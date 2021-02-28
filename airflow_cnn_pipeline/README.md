@@ -42,9 +42,10 @@ pip install -r requirements.txt
 
 ### Getting Started 
 
+
 #### Update S3 Bucket details
 
-Provide the S3 bucket name in the `bucket_name` parameter in `dags/train_model.py`
+Provide the S3 bucket name in the `bucket_name` parameter in `s3_uploader/upload_models.py`
 
 #### Airflow Configuration
 
