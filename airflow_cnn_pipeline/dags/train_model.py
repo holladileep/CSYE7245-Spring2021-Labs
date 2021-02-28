@@ -87,8 +87,8 @@ def upload_models():
     # Replace this with your S3 Bucket
     bucket_name = ''
 
-    model_files = [os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'retrained_graph_v2.pb')),
-                   os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'retrained_labels.txt'))]
+    model_files = [os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'models', 'retrained_graph_v2.pb')),
+                   os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'models', 'retrained_labels.txt'))]
     for file in model_files:
         print(file)
         s3.Bucket(bucket_name).upload_file(Filename=file,
@@ -216,3 +216,5 @@ with DAG('CNN-Training-Pipeline',
                                python_callable=upload_models)
 
 t0_start >> t1_getdata >> t2_cleanup >> t3_train >> t4_upload
+
+# t3_train >> t4_upload
