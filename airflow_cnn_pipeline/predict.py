@@ -82,9 +82,9 @@ output_layer = "final_result"
 
 
 
-def get_score():
+def get_score(path):
 
-    file_name = str(Path(__file__).with_name('out.jpg'))
+    file_name = path
     # Load the model
     graph = load_graph(model_file)
     t = read_tensor_from_image_file(
@@ -117,4 +117,3 @@ def get_score():
         print("Potentially", labels[i], "with confidence level", results[i])
 
     return df
-# get_score()

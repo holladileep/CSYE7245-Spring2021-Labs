@@ -43,7 +43,7 @@ class FileUpload(object):
         file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
         opencv_image = cv2.imdecode(file_bytes, 1)
         cv2.imwrite('out.jpg', opencv_image)
-        df = get_score()
+        df = get_score('out.jpg')
 
         df2 = df.set_index('Issue')
         st.dataframe(df2)
