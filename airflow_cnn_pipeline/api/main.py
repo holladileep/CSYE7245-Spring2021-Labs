@@ -1,8 +1,8 @@
 import os
 from fastapi import FastAPI
-
 from get_image import download
 from predict import get_score
+
 
 app = FastAPI()
 
@@ -17,3 +17,16 @@ def get_inference(img_url: str):
 
     # Return the issue & confidence
     return a
+
+@app.post("/pipeline/start")
+def start_pipeline():
+    run_details = os.system('airflow dags trigger CNN-Training-Pipeline')
+    # Return the issue & confidence
+    return {"status": "Airflow Pipeline Started", "details": run_details}
+
+@app.post("/pipeline/config")
+def start_server():
+    os.system('airflow webserver -D')
+    os.system('airflow scheduler')
+    # Return the issue & confidence
+    return {"Airflow Webserver & Scheduler Started"}
