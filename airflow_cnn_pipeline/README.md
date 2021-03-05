@@ -44,10 +44,25 @@ pip install -r requirements.txt
 
 ```
 airflow_cnn_pipeline/
+├── api/
+│   └── main.py
 ├── app.py
 ├── dags/
 │   ├── retrain.py
 │   └── train_model.py
+├── demo_img/
+│   ├── test1.jpg
+│   ├── test2.jpg
+│   ├── test3.jpg
+│   ├── test4.jpg
+│   └── test5.jpg
+├── get_image/
+│   ├── __init__.py
+│   └── download.py
+├── img/
+│   ├── airflow.jpg
+│   ├── airflow_ui.gif
+│   └── approach.jpg
 ├── models/
 │   ├── Mobilenet/
 │   │   └── mobilenet_v1_1.0_224/
@@ -57,6 +72,7 @@ airflow_cnn_pipeline/
 │   ├── retrained_graph_v2.pb
 │   └── retrained_labels.txt
 ├── predict.py
+├── README.md
 ├── requirements.txt
 ├── s3_uploader/
 │   ├── __init__.py
@@ -133,12 +149,34 @@ Login to Airflow on your browser and turn on the `CNN-Training-Pipeline` DAG fro
 ![airflow_run](/airflow_cnn_pipeline/img/airflow_ui.gif)
 
 
+### API Usage
+
+The API endpoints allow the following:
+- Starting the Airflow Webserver & Scheduler
+- Starting the training pipeline
+- Inference
+
+Start the API server by running
+```
+cd api
+uvicorn main:app --reload
+```
+
+API Documentation can be viewed by visiting 127.0.0.1:8000/docs
+
 ### Inference
+
+#### Using the Streamlit App
 
 The Streamlit app can be used for Inference. Start the server by running `streamlit run app.py` from your terminal. Open the app by visiting http://localhost:8501 on your browser.
 
-Alternatively, you may use the `predict.py` script for inference. Provide the path to your image and run the script.
+#### Using the API Endpoint
 
+Visit 127.0.0.1:8000/docs to view API documentation.
+
+#### Using the Standalone `.py` script
+
+You may use the `predict.py` script for inference. Provide the path to your image and run the script.
 
 #### Citation & References
 
