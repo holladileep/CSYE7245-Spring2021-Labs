@@ -47,6 +47,7 @@ dnspython==2.1.0
 docutils==0.16
 email-validator==1.1.2
 entrypoints==0.3
+fastapi==0.63.0
 Flask==1.1.2
 Flask-AppBuilder==3.1.1
 Flask-Babel==1.0.0
@@ -66,6 +67,7 @@ google-pasta==0.2.0
 graphviz==0.16
 grpcio==1.32.0
 gunicorn==19.10.0
+h11==0.12.0
 h5py==2.10.0
 html5lib==1.1
 idna==2.10
@@ -122,6 +124,7 @@ pendulum==2.1.2
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==8.1.0
+plotly==4.14.3
 prison==0.1.3
 prometheus-client==0.9.0
 prompt-toolkit==3.0.16
@@ -132,6 +135,7 @@ pyarrow==3.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
+pydantic==1.8
 pydeck==0.6.1
 Pygments==2.8.0
 PyJWT==1.7.1
@@ -149,6 +153,7 @@ PyYAML==5.4.1
 pyzmq==22.0.3
 requests==2.25.1
 requests-oauthlib==1.3.0
+retrying==1.3.3
 rich==9.2.0
 rsa==4.7.1
 s3transfer==0.3.4
@@ -161,7 +166,9 @@ soupsieve==2.2
 SQLAlchemy==1.3.15
 SQLAlchemy-JSONField==1.0.0
 SQLAlchemy-Utils==0.36.8
+starlette==0.13.6
 streamlit==0.76.0
+svgwrite==1.4.1
 swagger-ui-bundle==0.0.8
 tabulate==0.8.8
 tenacity==6.2.0
@@ -181,6 +188,7 @@ typing-extensions==3.7.4.3
 tzlocal==2.1
 unicodecsv==0.14.1
 urllib3==1.26.3
+uvicorn==0.13.4
 validators==0.18.2
 wcwidth==0.2.5
 webencodings==0.5.1
