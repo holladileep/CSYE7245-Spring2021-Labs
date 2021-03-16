@@ -31,7 +31,9 @@ This use case is from MLflow's examples and the complete list of examples can be
 #### MLflow with TensorFlow 2.0.0
 
 In this example, we use TensorFlow's [premade estimator iris data example](https://www.tensorflow.org/tutorials/estimator/premade) and add MLflow tracking.
+
 This example trains a `tf.estimator.DNNClassifier` on the [iris dataset](https://archive.ics.uci.edu/ml/datasets/iris) and predicts on a validation set.
+
 The code is mostly pure TensorFlow - we add a call to `mlflow.tensorflow.autolog()` before training to record params & metrics from model training (e.g. model loss) as part of an MLflow run. After training, `mlflow.tensorflow.autolog()` links the model with the same MLflow run when `export_saved_model()` is called, allowing us to associate the model with its training metrics & params. We then demonstrate how to load the saved model back as a generic `mlflow.pyfunc`, allowing us to make predictions on pandas DataFrames.
 
 #### Code related to MLflow:
@@ -44,13 +46,13 @@ The ML model artifact creation is handled during the call to `tf.estimator.expor
 This function loads back the model as a generic python function. You can predict on this with a pandas DataFrame input.
 
 #### Running the code
-To run the example via MLflow, navigate to the `mlflow/examples/tensorflow/tf2` directory and run the command
+To run the example via MLflow, navigate to the cloned directory and run the command
 
 ```
 mlflow run .
 ```
 
-This will run `train_predict_2.py` with the default parameters `--batch_size=100` and `--train_steps=1000`. You can see the default values in the `MLproject` file.
+This will run `train_predict.py` with the default parameters `--batch_size=100` and `--train_steps=1000`. You can see the default values in the `MLproject` file.
 
 In order to run the file with custom parameters, run the command
 
