@@ -50,6 +50,16 @@ Run a container based on the image:
 docker run -d --name mycontainer -p 80:80 myimage
 ```
 
+Open the FastAPI docs by visitng http://0.0.0.0:80/docs
+
+
+#### Running this example
+
+This example creates an API endpoint that can be used for the following:
+- `GET` to scrape awikipedia article. Parameters: Wiki URL
+- `GET` to scrape & summarize a Wikipedia article. Parameters: Wiki URL & Ratio
+
+
 #### Docker Cheat-Sheets
 
 - https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf

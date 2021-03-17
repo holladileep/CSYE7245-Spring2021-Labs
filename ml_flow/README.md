@@ -2,10 +2,10 @@
 
 MLflow is an open source platform for managing the end-to-end machine learning lifecycle. It tackles four primary functions:
 
--Tracking experiments to record and compare parameters and results
--Packaging ML code in a reusable, reproducible form in order to share with other data scientists or transfer to production
--Managing and deploying models from a variety of ML libraries to a variety of model serving and inference platforms
--Providing a central model store to collaboratively manage the full lifecycle of an MLflow Model, including model versioning, stage transitions, and annotations [1]
+- Tracking experiments to record and compare parameters and results
+- Packaging ML code in a reusable, reproducible form in order to share with other data scientists or transfer to production
+- Managing and deploying models from a variety of ML libraries to a variety of model serving and inference platforms
+- Providing a central model store to collaboratively manage the full lifecycle of an MLflow Model, including model versioning, stage transitions, and annotations [1]
 
 #### MLflow Components
 
@@ -79,15 +79,8 @@ and navigating to [http://localhost:5000](http://localhost:5000).
 For more information on MLflow tracking, click [here](https://www.mlflow.org/docs/latest/tracking.html#mlflow-tracking) to view documentation.
 
 
-
-#### Docker Cheat-Sheets
-
-- https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf
-- https://github.com/wsargent/docker-cheat-sheet
-
-
 #### Citation & References
 
 [[1] MLflow](https://www.mlflow.org/docs/latest/index.html) <br/>
-[[2] MLflow Components](https://www.mlflow.org/docs/latest/concepts.html)
+[[2] MLflow Components](https://www.mlflow.org/docs/latest/concepts.html) <br/>
 [[3] Mlflow Examples](https://github.com/mlflow/mlflow/tree/master/examples)
