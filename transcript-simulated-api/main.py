@@ -8,7 +8,7 @@ from pydantic import BaseModel
 app = FastAPI()
 
 # Specify your Data Directory here
-data_dir = './sec-edgar/call_transcripts/'
+data_dir = './inference-data/'
 companies = [f for f in listdir(data_dir) if isfile(join(data_dir, f))]
 
 
