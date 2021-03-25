@@ -1,0 +1,104 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Sample SAM TF Lite Function
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 30
+  Api:
+    BinaryMediaTypes:
+    - image~1png
+    - image~1jpeg
+
+Resources:
+  TFLiteFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: src/
+      Layers:
+        - !Ref TFLiteRuntimeLayer
+        - !Ref PillowLayer
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      Events:
+        Base:
+          Type: Api
+          Properties:
+            Method: any
+            Path: /
+            RestApiId: !Ref ServerlessRestApi
+        Others:
+          Type: Api
+          Properties:
+            Method: any
+            Path: /{proxy+}
+            RestApiId: !Ref ServerlessRestApi
+            
+  # https://aws.amazon.com/blogs/developer/handling-arbitrary-http-requests-in-amazon-api-gateway/
+  ServerlessRestApi:
+    Type: "AWS::Serverless::Api"
+    Properties:
+      StageName: Prod
+      DefinitionBody:
+        openapi: "3.0"
+        info:
+          title: !Ref "AWS::StackName"
+          version: "1.0"
+        paths:
+          /:
+            x-amazon-apigateway-any-method:
+              responses:
+                {}
+            x-amazon-apigateway-integration:
+              httpMethod: POST
+              type: aws_proxy
+              uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${TFLiteFunction.Arn}/invocations"
+          /{proxy+}:
+            x-amazon-apigateway-any-method:
+              responses:
+                {}
+            x-amazon-apigateway-integration:
+              httpMethod: POST
+              type: aws_proxy
+              uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${TFLiteFunction.Arn}/invocations"
+
+
+  # https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/
+  TFLiteRuntimeLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: TFLiteRuntime
+      Description: TF Lite Runtime Layer
+      ContentUri: layers/tflite_runtime/
+      CompatibleRuntimes:
+        - python3.8
+      RetentionPolicy: Retain
+    Metadata:
+      BuildMethod: python3.8
+            
+  PillowLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: Pillow
+      Description: Pillow Layer
+      ContentUri: layers/pillow/
+      CompatibleRuntimes:
+        - python3.8
+      RetentionPolicy: Retain
+    Metadata:
+      BuildMethod: python3.8
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  TFLiteApi:
+    Description: "API Gateway endpoint URL for Prod stage for TF Lite function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+  TFLiteFunction:
+    Description: "TF Lite Lambda Function ARN"
+    Value: !GetAtt TFLiteFunction.Arn
+  TFLiteFunctionIamRole:
+    Description: "Implicit IAM Role created for TF Lite function"
+    Value: !GetAtt TFLiteFunctionRole.Arn
