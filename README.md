@@ -63,5 +63,9 @@ Refer `README.md` inside the respective directories for setup instructions.
 - :white_check_mark: Tensorboard: `tensorboard`
 - :white_check_mark: MLflow: `mlflow`
 - :white_check_mark: Docker + FastAPI: `docker`
+- :white_check_mark: Tensorboard: `tensorboard`
+- :white_check_mark: Graphana, Prometheus, Kubernetes: `kubernetes-ml-monitoring`
+- :white_check_mark: AWS Lambda - ML Inference: `ml-inference-with-lambda`
+- :white_check_mark: ML Flow + DeltaLake: `mlflow-deltalake`
 
 
